@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  
+    <title>HTML5 Canvas Drawing</title>
+    <!-- import SocketIO JavaScript library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.min.js"></script>
+
+    <!-- get data from Python / Flask into JavaScript: -->
+    <script>
+        yourColour = "{{ your_colour }}";
+    </script>
+
+    <!-- link CSS styles -->
+    <link href="static/styles.css" rel="stylesheet"/>
+
+    <!-- link preloaded JS (WS connection) -->
+    <script src="static/connect_websockets.js" defer></script>   
+</head>
+
+<body>
+
+    <h1>Drawing App Demo - HTML5 Canvas, JS, SocketIO</h1>
+    
+    <canvas id="drawingCanvas" width="800" height="600"></canvas>
+
+    <!-- link postloaded JS (canvas drawing code) -->
+    <script src="static/canvas_drawing.js" defer></script>  
+   
+</body>
+</html>
